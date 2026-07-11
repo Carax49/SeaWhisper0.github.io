@@ -36,6 +36,7 @@ Create your Markdown file (e.g. `posts/ctf/demo.md`):
 
 ````markdown
 # Challenge Title
+Author: The name of the person who wrote this article
 
 ## Overview
 Brief description of the challenge.
