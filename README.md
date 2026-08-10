@@ -6,6 +6,14 @@
 
 ## ✍️ How to add a writeup or research article
 
+**Getting started:**
+
+- **Fork** this repository.
+- **Clone** your fork to your local machine.
+- Make your changes by following the steps below.
+- **Commit and push** to your fork.
+- Open a **pull request** to this repository.
+
 ### 1️⃣ Register the post in [`posts/index.txt`](./posts/index.txt)
 
 Add an entry to the JSON array — set **`category`** to `ctf` or `research`:

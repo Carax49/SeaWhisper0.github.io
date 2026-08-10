@@ -1,4 +1,3 @@
 # About
 
-**SeaWhisper0** is a Capture The Flag (CTF) team passionate about cybersecurity.
-
+**SeaWhisper0** is an international CTF team passionate about cybersecurity.
