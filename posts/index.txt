@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "title": "scriptCTF 2026 - John Cena (Forensics)",
+        "category": "ctf",
+        "file": "posts/ctf/scriptCTF2026/john_cena_for.md",
+        "date": "2026-08-10",
+        "description": "Compare encrypt image with the original image to find the differing bits.",
+        "tags": ["forensics", "image"]
+    }
+]
