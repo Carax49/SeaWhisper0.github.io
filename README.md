@@ -35,7 +35,7 @@ Add an entry to the JSON array — set **`category`** to `ctf` or `research`:
 Create your Markdown file (e.g. `posts/ctf/demo.md`):
 
 ````markdown
-# Challenge Title
+# Title
 Author: The name of the person who wrote this article
 
 ## Overview
