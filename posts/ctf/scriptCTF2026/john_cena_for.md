@@ -1,4 +1,4 @@
-# scriptCTF 2026 - John Cena (Forensics)
+# John Cena
 **Author**: lucas
 
 ## Overview
