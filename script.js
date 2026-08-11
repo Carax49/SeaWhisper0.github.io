@@ -332,9 +332,11 @@ const PostView = {
 
     addCopyButtons() {
         DOM.articleContent.querySelectorAll('pre').forEach(pre => {
-            if (pre.querySelector('.copy-btn')) return;
-
-            pre.style.position = 'relative';
+            if (pre.parentElement && pre.parentElement.classList.contains('code-block')) return;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'code-block';
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
 
             const btn = document.createElement('button');
             btn.className = 'copy-btn';
@@ -372,7 +374,20 @@ const PostView = {
                 });
             });
 
-            pre.appendChild(btn);
+            wrapper.appendChild(btn);
+
+            pre.addEventListener('mousemove', (e) => {
+                const onScrollbar = e.offsetX > pre.clientWidth || e.offsetY > pre.clientHeight;
+                wrapper.classList.toggle('active', !onScrollbar);
+            });
+            wrapper.addEventListener('mouseleave', () => wrapper.classList.remove('active'));
+
+            let scrollTimer;
+            pre.addEventListener('scroll', () => {
+                wrapper.classList.add('scrolling');
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(() => wrapper.classList.remove('scrolling'), 500);
+            });
         });
     },
 
@@ -459,6 +474,7 @@ const UI = {
     showPostsList() {
         DOM.postContent.style.display = 'none';
         DOM.postsList.style.display = 'flex';
+        document.body.classList.remove('reading-mode');
         document.title = "SeaWhisper0";
         TOC.clear();
     },
@@ -466,6 +482,7 @@ const UI = {
     showArticle() {
         DOM.postsList.style.display = 'none';
         DOM.postContent.style.display = 'block';
+        document.body.classList.add('reading-mode');
         window.scrollTo(0, 0);
     },
 
