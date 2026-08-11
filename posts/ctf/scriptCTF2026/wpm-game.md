@@ -3,8 +3,6 @@
 **Author**: carax49
 
 ## Overview
-
-- Challenge: [wpm-game](https://play.scriptsorcerers.xyz/challenges#wpm-game-66)
 - Category: Web
 - Description:
 
