@@ -6,5 +6,13 @@
         "date": "2026-08-10",
         "description": "Compare encrypt image with the original image to find the differing bits.",
         "tags": ["forensics", "image"]
+    },
+    {
+        "title": "scriptCTF 2026 - wpm-game (Web)",
+        "category": "ctf",
+        "file": "posts/ctf/scriptCTF2026/wpm-game.md",
+        "date": "2026-08-10",
+        "description": "Bypass a blacklist filter to achieve eval() injection via the 'wpm' parameter.",
+        "tags": ["web", "rce"]
     }
 ]
